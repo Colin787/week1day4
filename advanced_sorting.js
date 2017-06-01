@@ -9,9 +9,13 @@ var students = [
   //by name
 students.sort(function(a,b){
   var compare = a.name.localeCompare(b.name);
-  if(compare!==0){
-    return a.name.localeCompare(b.name);
+  if(a.name === b.name){
+    return b.age - a.age;
   }
+  if(compare!==0){
+    return compare;
+  }
+
 });
 
 console.log(students);
